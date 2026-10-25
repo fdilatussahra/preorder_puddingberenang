@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f8f7e8">
+  <title>Pudding Berenang — Pre Order</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#beranda">
+      <span class="brand-icon">☀️</span>
+      <span>Pudding Berenang</span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Buka menu">☰</button>
+    <nav class="nav-links" id="navLinks">
+      <a class="active" href="#beranda">Beranda</a>
+      <a href="#menu">Menu</a>
+      <a href="#cara-order">Cara Order</a>
+      <a href="#keranjang">Keranjang <span class="cart-count" id="navCartCount">0</span></a>
+    </nav>
+    <a class="admin-button" id="chatAdminTop" href="#" target="_blank" rel="noopener">◉ Chat Admin</a>
+  </header>
+
+  <main>
+    <section class="hero" id="beranda">
+      <div class="hero-copy">
+        <span class="eyebrow">Segar • Manis • Bikin nagih</span>
+        <h1>Pudding<br><span>Berenang</span></h1>
+        <p class="hero-desc">Segarnya minuman, lembutnya pudding,<br class="desktop-only"> dalam satu botol!</p>
+        <div class="benefits">
+          <span>🌿 <b>Bahan<br>berkualitas</b></span>
+          <span>☺️ <b>Rasa<br>enak</b></span>
+          <span>🛡️ <b>Higienis &<br>aman</b></span>
+        </div>
+        <a class="primary-button" href="#menu">☏ <span>Pilih Menu Sekarang!</span> <b>›</b></a>
+      </div>
+      <div class="hero-art">
+        <img src="hero.jpg" alt="Minuman pudding dengan 2 rasa">
+        <div class="round-sticker">Pudding<br>Berenang</div>
+        <div class="sun-doodle">☀</div>
+      </div>
+    </section>
+
+    <section class="menu-order section-wrap" id="menu">
+      <div class="menu-column">
+        <div class="section-heading">
+          <h2>Varian Rasa</h2>
+          <p>Pilih rasa favorit kamu!</p>
+        </div>
+        <div class="product-grid">
+          <article class="product-card matcha">
+            <div class="product-image">
+              <img src="matcha.jpg" alt=" Minuman matcha">
+            </div>
+            <div class="product-info">
+              <h3>Matcha + Pudding Mangga</h3>
+              <p>Matcha creamy dengan pudding mangga yang manis dan menyegarkan.</p>
+              <div class="product-bottom"><strong>Rp 6.000</strong><span>/ botol</span></div>
+              <button class="add-button" data-product="matcha">＋ Tambah ke Keranjang</button>
+            </div>
+          </article>
+          <article class="product-card chocolate">
+            <div class="product-image">
+              <img src="cokelat.jpg" alt="Minuman cokelat">
+            </div>
+            <div class="product-info">
+              <h3>Coklat + Pudding Strawberry</h3>
+              <p>Cokelat rich dengan pudding strawberry yang lembut dan segar.</p>
+              <div class="product-bottom"><strong>Rp 6.000</strong><span>/ botol</span></div>
+              <button class="add-button" data-product="cokelat">
+                + Tambah ke Keranjang
+              </button>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <aside class="cart-panel" id="keranjang">
+        <div class="cart-title"><span>🛒</span><h2>Keranjang Pesanan</h2></div>
+        <p class="muted">Atur pesananmu, lalu kirim langsung ke WhatsApp kami.</p>
+        <div id="cartItems" class="cart-items">
+          <div class="empty-cart">🧺<br>Keranjangmu masih kosong.<br><small>Tambahkan menu favoritmu dulu, ya!</small></div>
+        </div>
+        <div class="cart-total">
+          <div><strong>Total Harga</strong><small id="totalQty">(0 botol)</small></div>
+          <strong id="totalPrice">Rp 0</strong>
+        </div>
+        <form id="orderForm" class="order-form">
+          <label for="customerName">Nama lengkap</label>
+          <input id="customerName" name="customerName" type="text" placeholder="Masukkan nama kamu" required>
+          <label for="customerPhone">Nomor WhatsApp</label>
+          <input id="customerPhone" name="customerPhone" type="tel" placeholder="Contoh: 081234567890" required>
+          <label for="orderNotes">Catatan (opsional)</label>
+          <textarea id="orderNotes" name="orderNotes" rows="3" placeholder="Contoh: Diantarkan ke kelas XI RPL 2"></textarea>
+          <button class="send-button" type="submit">☏ Kirim Pesanan ke WhatsApp</button>
+          <p class="privacy-note">🔒 Pesanan akan dibuka di WhatsApp. Periksa kembali, lalu Kirim.</p>
+        </form>
+      </aside>
+    </section>
+
+    <section class="why-section section-wrap" id="cara-order">
+      <div class="why-copy">
+        <h2>Kenapa Harus<br>Pudding Berenang?</h2>
+        <div class="why-grid">
+          <div>🌿 <span><b>Rasa unik</b><small>dan menyegarkan</small></span></div>
+          <div>🍮 <span><b>Pudding lembut</b><small>di setiap tegukan</small></span></div>
+          <div>🎁 <span><b>Kemasan praktis</b><small>dan lucu</small></span></div>
+          <div>💚 <span><b>Cocok untuk</b><small>segala suasana</small></span></div>
+        </div>
+      </div>
+      <div class="why-image">
+        <img src="pudding.jpg" alt="Minuman segarr">
+        <span>Yummy!</span>
+      </div>
+      <div class="open-order">
+        <h2>Open Pre Order</h2>
+        <p>Mulai dari Sekarang!</p>
+        <a href="#menu">🗓️ Pilih rasa favoritmu</a>
+      </div>
+    </section>
+
+    <section class="how-to section-wrap">
+      <h2>Cara Order</h2>
+      <div class="steps">
+        <div><span>1</span><b>Pilih menu</b><p>Tekan tombol tambah ke keranjang.</p></div>
+        <div><span>2</span><b>Isi data</b><p>Masukkan nama, nomor WhatsApp, dan catatan.</p></div>
+        <div><span>3</span><b>Kirim WhatsApp</b><p>Periksa ringkasan pesanan lalu tekan Kirim.</p></div>
+      </div>
+    </section>
+  </main>
+  <footer>© <span id="year"></span> Fadilatus Sahra • Dibuat dengan 💚</footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+    </html>
+  
